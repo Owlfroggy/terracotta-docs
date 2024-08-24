@@ -1,0 +1,57 @@
+.nn {
+    color: #B1D7E0;
+}
+
+.nf {
+    color: #FDFBAC;
+}
+
+.o {
+    color: #4CFFFF;
+}
+
+.pp {
+    color: #8888FF;
+}
+
+.s {
+    color: #ADF195;
+}
+
+.k {
+    color: #F86D7C;
+    font-weight: bold;
+}
+
+.kd {
+    color: #F86DA7;
+    font-weight: bold;
+}
+
+.ks {
+    color: #CCAAFF;
+}
+
+.nv {
+    color: #CCCCCC;
+}
+
+.err {
+    color: #CCCCCC;
+}
+
+.nc {
+    color: #84D6FF;
+}
+
+.m {
+    color: #FFC600
+}
+
+.c {
+    color: #777777;
+}
+
+.py {
+    color: #61A2F1;
+}
