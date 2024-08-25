@@ -14,16 +14,7 @@ theme:
     - content.code.copy
   language: en
   palette:
-    - scheme: default
-      toggle:
-        icon: material/toggle-switch-off-outline 
-        name: Switch to dark mode
-      primary: cyan
-      accent: orange
-    - scheme: slate 
-      toggle:
-        icon: material/toggle-switch
-        name: Switch to light mode    
+    - scheme: slate
       primary: teal
       accent: deep-orange
 markdown_extensions:
