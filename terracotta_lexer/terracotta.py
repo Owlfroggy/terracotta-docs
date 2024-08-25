@@ -13,7 +13,7 @@ STANDARD_TYPES[Keyword.Scope] = "ks"
 #   so make sure that every single bit of text INCLUDING WHITESPACE is in a capture group
 # - a token type of None will exclude that capture group's content from appearing in the codeblock at all
 #   (useful for capture groups used for backreferencing)
-def byGroup(*tokens: _TokenType):
+def byGroup(*tokens: _TokenType): #realized after the fact that this exists built-in and i made a custom one for nothing!! i even named it basically the same thing!!!!!!
     def byGroupTokenProvider(_, m: re.Match):
         i = -1
         for token in tokens:
@@ -24,6 +24,14 @@ def byGroup(*tokens: _TokenType):
             yield m.span(i+1), token, m.group(i+1)
 
     return byGroupTokenProvider
+
+def highlightEscapeSequences(_, m: re.Match):
+    lastEnd = 0
+    for thism in re.finditer(r'\\u[A-Fa-f0-9]{4}|\\u\{[^}]*\}|\\[\'\"n\\&]',m.group(0)):
+        yield (lastEnd,thism.start()), String, m.group(0)[lastEnd:thism.start()]
+        yield thism.span(), String.Escape, thism.group(0)
+        lastEnd = thism.end()
+    yield (lastEnd, len(m.group(0))), String, m.group(0)[lastEnd:len(m.group(0))]
 
 
 class TerracottaLexer(RegexLexer):
@@ -38,7 +46,7 @@ class TerracottaLexer(RegexLexer):
             (r'#.*',Comment),
 
 
-            (r'(?:(?:(?<=\W)|^)s)?((\"|\')(?:\\\2|(?!\2).)*(?:\2|$|\\))', String),
+            (r'(?:(?:(?<=\W)|^)s)?((\"|\')(?:\\\2|(?!\2).)*(?:\2|$|\\))', highlightEscapeSequences),
             (r'(?!_)((?:\d|_(?!\.))*\.?(?!_)(?:\d|_(?![^0-9]))+)', Number),
             (r'[\{\}\(\)\[\]]',Punctuation.Paren),
 

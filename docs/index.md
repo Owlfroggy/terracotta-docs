@@ -3,6 +3,7 @@
 ```tc
 FUNCTION numbergame;
 
+"\u{13487137887} dingus \n akjshdg"
 
 dict:Get:num;
 
