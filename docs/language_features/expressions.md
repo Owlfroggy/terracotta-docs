@@ -160,7 +160,7 @@ line firstUnlock = line gameState["redTeam"]:dict["unlocks"]:list[1];
 
 Unlike a certain expression system used by DiamondFire that **shall not be named**, Terracotta expressions follow a sane order of operations.
 
-Things closer to the top of the list are evaluated before things closer to the bottom. Things on the same line are evaluated left-to-right with the same priority.
+Things closer to the top of this list are evaluated before things closer to the bottom. Things on the same line of this list are evaluated from left to right.
 
 - Nested expressions (parentheses), indexing into dicts/lists, and function calls (actions, constructors)
 - Exponentiation (`^`)
