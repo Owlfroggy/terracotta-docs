@@ -58,7 +58,7 @@ global moduloed   %= 2;
 ## Type Overrides
 Terracotta has some type inference built in, so for many situations (especially those involving numbers or variables that are declared inside the file you're working in) you won't have to worry about types. Sometimes though, the type of a value is unknown and must be specified manually in order to use it with operations. This can be done by adding `: <type>` after the value.
 
-In the below case, `spawnLocation`'s type is unknown. For the compilier to know what to do when adding the vector to it, you have to manually specify that it's a location.
+In the below case, `spawnLocation`'s type is unknown. For the compiler to know what to do when adding the vector to it, you have to manually specify that it's a location.
 ```tc
 default:Teleport(global spawnLocation: loc + vec[1,10,1]);
 ```
@@ -68,7 +68,7 @@ Specifying the type of a variable every time you use it would suck, so you can a
 ```tc
 global spawnLocation: loc;
 
-# compilier now knows for both of these lines that `spawnLocation` is a location
+# compiler now knows for both of these lines that `spawnLocation` is a location
 default:Teleport(global spawnLocation + vec[0,10,0]);
 wait(1){"Time Unit" = "Seconds"};
 default:Teleport(global spawnLocation + vec[0,20,0]);

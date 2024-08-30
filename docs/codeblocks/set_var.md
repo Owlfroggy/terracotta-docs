@@ -1,1 +1,1 @@
-Math operations can be done much easier by using [Expressions](../language_features/expressions.md). You should only do math via setvar actions when you want absolute control over the template's codeblocks, otherwise its easier to let the compilier handle it for you.
+Math operations can be done much easier by using [Expressions](../language_features/expressions.md). You should only do math via setvar actions when you want absolute control over the template's codeblocks, otherwise its easier to let the compiler handle it for you.
