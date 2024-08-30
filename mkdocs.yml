@@ -1,33 +1,54 @@
 site_name: Terracotta
+site_url: https://mrawesomeowl.github.io/terracotta-docs/
 docs_dir: docs
 theme:
   name: material
   features:
-    - navigation.tabs
-    - navigation.sections
-    - toc.integrate
-    - navigation.top
+    # - navigation.sections
+    - navigation.path
     - search.suggest
     - search.highlight
     - content.tabs.link
     - content.code.annotation
     - content.code.copy
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.indexes
+    - navigation.expand
+    - content.code.annotate
   language: en
   palette:
     - scheme: slate
       primary: teal
       accent: deep-orange
 markdown_extensions:
-  - codehilite
+  # - codehilite
   - toc:
       permalink: true
+      title: Table of Contents
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - tables
+  - attr_list
+  - md_in_html
 nav:
-  - Home: index.md
+  - About: index.md
+  - Getting Started: 
+    - Installation: getting_started/installation.md
+    - Plot Setup: getting_started/plot_setup.md
+    - Syntax Guide: getting_started/syntax_guide.md
+  - Language Features:
+    - Expressions (math): language_features/expressions.md
+  - Code Blocks:
+    - Action: codeblocks/action.md
+    - Set Variable: codeblocks/set_var.md
 extra_css:
   - style.css

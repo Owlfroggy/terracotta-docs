@@ -1,61 +1,61 @@
-.nn {
+.highlight .nn {
     color: #B1D7E0;
 }
 
-.nf {
+.highlight .nf {
     color: #FDFBAC;
 }
 
-.o {
+.highlight .o {
     color: #4CFFFF;
 }
 
-.pp {
+.highlight .pp {
     color: #8888FF;
 }
 
-.s {
+.highlight .s {
     color: #ADF195;
 }
 
-.k {
+.highlight .k {
     color: #F86D7C;
     font-weight: bold;
 }
 
-.kd {
+.highlight .kd {
     color: #F86DA7;
     font-weight: bold;
 }
 
-.ks {
+.highlight .ks {
     color: #CCAAFF;
 }
 
-.nv {
+.highlight .nv {
     color: #CCCCCC;
 }
 
-.err {
+.highlight .err {
     color: #CCCCCC;
 }
 
-.nc {
+.highlight .nc {
     color: #84D6FF;
 }
 
-.m {
+.highlight .m {
     color: #FFC600
 }
 
-.c {
+.highlight .c {
     color: #777777;
 }
 
-.py {
+.highlight .py {
     color: #61A2F1;
 }
 
-.se {
+.highlight .se {
     color: #89DDFF
 }
