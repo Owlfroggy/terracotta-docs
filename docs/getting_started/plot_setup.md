@@ -3,7 +3,7 @@
 If you haven't already installed the VSCode extension and CodeUtils, see [Installation](/getting_started/installation.md)
 
 !!! warning "Don't delete your code!"
-    Always make sure to start with an empty plot. Never run terracotta on plots made using normal DiamondFire coding because there is no way to recover code terracotta may overwrite.
+    Always make sure to start with an empty plot. Never run Terracotta on plots made using normal DiamondFire coding because there is no way to recover code Terracotta may overwrite.
 
 ## Creating a Project
 First, create a project folder to hold all your plot's code and open it in VSCode. Then from the Run and Debug menu, click `create a launch.json file` and select `Terracotta` from the list of langauges. In the newly created `launch.json` file, make sure to set `plotSize` appropriately for the plot you will be compiling to.

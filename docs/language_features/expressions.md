@@ -33,7 +33,7 @@ wait(5 * 20){"Time Unit" = "Ticks"};
 ```
 
 ## Inlined Functions
-Any function that returns a value can be used in expressions. Some actions like Set Location Coordinate don't have a return value listed in their description, still return a value anyway. Generally, if an action has `Variable - Variable to set` as its first parameter, it can be inlined.
+Any function that returns a value can be used in expressions. Some actions like Set Location Coordinate still return a value even if their description doesn't say so. Generally, if an action has `Variable - Variable to set` as its first parameter, it can be inlined.
 
 Custom functions cannot be inlined yet as they cannot specify return types, however this functionality will be added in a future update.
 
@@ -56,7 +56,7 @@ global moduloed   %= 2;
 ```
 
 ## Type Overrides
-Terracotta has some type inference built in, so for many situations (especially those involving numbers or variables that are declared inside the file you're working in) you won't have to worry about types. Sometimes though, the type of a value is unknown and must be specified manually in order to use it with operations. This can be done by adding `: <type>` after the value.
+Terracotta has some type inference built in, so for many situations (especially variables that are declared inside the file you're working in) you won't have to worry about types. Sometimes though, the type of a value is unknown and must be specified manually in order to use it with operations. This can be done by adding `: <type>` after the value.
 
 In the below case, `spawnLocation`'s type is unknown. For the compiler to know what to do when adding the vector to it, you have to manually specify that it's a location.
 ```tc
@@ -115,7 +115,7 @@ default:SendMessage(line list[3]);
         "spawn" = loc[10,50,10]
     };
 
-    line selectedLocation = global locations["spawn"]
+    line selectedLocation = global locations["spawn"];
 
     default:SendMessage("Teleporting to location", line selectedLocation);
     default:Teleport(line selectedLocation);
@@ -154,6 +154,25 @@ line gameState = {
 };
 
 line firstUnlock = line gameState["redTeam"]:dict["unlocks"]:list[1];
+```
+
+You can set dictionary values by indexing into them and using an assignment operator.
+
+```tc
+global dict = {};
+global dict["key"] = 100;
+
+default:SendMessage(global dict["key"]); #sends "100"
+```
+
+Assigning values to keys multiple levels deep will change the value in the original dictionary.
+```tc
+global dict = {
+    "words" = ["random value"]
+};
+global dict["words"]:list[0] = "jeremaster";
+
+default:SendMessage(global dict["words"][0]); #sends "jeremaster"
 ```
 
 ## Order of Operations
