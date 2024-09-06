@@ -49,6 +49,8 @@ nav:
     - Syntax Guide: getting_started/syntax_guide.md
   - Language Features:
     - Expressions (math): language_features/expressions.md
+  - Code Items:
+    - Variable: codeitems/variable.md
   - Code Blocks:
     - Action: codeblocks/action.md
     - Set Variable: codeblocks/set_var.md
