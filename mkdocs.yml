@@ -19,6 +19,7 @@ theme:
     - navigation.indexes
     - navigation.expand
     - content.code.annotate
+    - content.tooltips
   language: en
   palette:
     - scheme: slate
@@ -38,6 +39,8 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  - abbr
+  - attr_list
   - tables
   - attr_list
   - md_in_html
@@ -51,7 +54,8 @@ nav:
     - Expressions (math): language_features/expressions.md
   - Code Items:
     - Variable: codeitems/variable.md
-    - String & Styled Text: codeitems/string_and_styled_text.md
+    - String: codeitems/string.md
+    - Styled Text: codeitems/styled_text.md
   - Code Blocks:
     - Action: codeblocks/action.md
     - Set Variable: codeblocks/set_var.md
