@@ -43,6 +43,10 @@ Player actions use the following targets:
 - `allPlayers`
 - `selection`
 
+??? info "All player action names"
+    {{ read_csv('csv/actions/player_action.csv') }}
+
+
 ```tc title="Examples"
 default:GivePotionEffect(pot["Saturation"]){"Effect Particles" = "None", "Overwrite Effect" = "False"};
 
@@ -73,6 +77,9 @@ Entity actions use the following targets:
 - `projectile`
 - `lastEntity`
 
+??? info "All entity action names"
+    {{ read_csv('csv/actions/entity_action.csv') }}
+
 ```tc title="Examples"
 defaultEntity:Teleport(default.Location + vec[0,10,0]);
 
@@ -90,6 +97,9 @@ lastEntity:SetTag("owner","%default");
 ## Game Actions
 
 Game actions use the `game` target. 
+
+??? info "All game action names"
+    {{ read_csv('csv/actions/game_action.csv') }}
 
 ```tc title="Examples"
 game:SpawnMob(item["zombie_spawn_egg"],game.EventBlockLocation);

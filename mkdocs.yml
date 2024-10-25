@@ -61,3 +61,6 @@ nav:
     - Set Variable: codeblocks/set_var.md
 extra_css:
   - style.css
+plugins:
+  - search
+  - table-reader
