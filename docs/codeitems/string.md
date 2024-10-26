@@ -28,7 +28,7 @@ default:SendMessage('jeff\'s',"\"amazing\"","creation"); #jeff's "amazing" creat
 default:SendMessage("/ iron\&diamonds \\"); #/ iron&diamonds \
 ```
 
-Newlines can be inserted using `\n`
+Newlines can be inserted using `\n`.
 ```tc
 default:SendMessage("%default's stats:\nCoins: %var(%default coins)\nLevel: %var(%default level)");
 ```

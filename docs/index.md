@@ -6,7 +6,7 @@ I do not like block code.
 
 Terracotta is a text-based programming language that compiles to DiamondFire templates with the goal of *actually* making plot development easier. Unlike previous text-to-df languages, Terracotta makes no compromises when it comes to functionality or convenience. Everything you can do with DiamondFire blocks is just as easy or easier in Terracotta.
 
-To get started, visit [Installation Guide]() and [Plot Setup](getting_started/plot_setup.md)
+To get started, visit [Installation Guide]() and [Plot Setup](getting_started/plot_setup.md).
 
 ## Why Terracotta is awesome
 

@@ -1,6 +1,6 @@
 # Expressions
 
-For uses of the Set Variable block not covered by the operators listed below, see [Set Variable](../codeblocks/set_var.md)
+For uses of the Set Variable block not covered by the operators listed below, see [Set Variable](../codeblocks/set_var.md).
 
 You can write an expression *almost* anywhere you can put a value.
 
@@ -64,7 +64,7 @@ default:Teleport(global spawnLocation: loc + vec[1,10,1]);
 ```
 
 
-Specifying the type of a variable every time you use it would suck, so you can also assign a type to variables outside of expressions
+Specifying the type of a variable every time you use it would suck, so you can also assign a type to variables outside of expressions.
 ```tc
 global spawnLocation: loc;
 
@@ -123,7 +123,7 @@ default:SendMessage(line list[3]);
 
     It's true that the above example is a bit unnecessary, but in loops or when using indexing operations that traverse multiple levels the saved CPU can really add up.
 
-Indexes can themselves be expressions
+Indexes can themselves be expressions.
 ```tc
 line scores = [23,925,78,873];
 default:SendMessage(line teamScores[num:Random(1,4)]);

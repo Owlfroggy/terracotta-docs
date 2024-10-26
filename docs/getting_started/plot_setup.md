@@ -1,6 +1,6 @@
 # Plot Setup
 
-If you haven't already installed the VSCode extension and CodeUtils, see [Installation](/getting_started/installation.md)
+If you haven't already installed the VSCode extension and CodeUtils, see [Installation](/getting_started/installation.md).
 
 !!! warning "Don't delete your code!"
     Always make sure to start with an empty plot. Never run Terracotta on plots made using normal DiamondFire coding because there is no way to recover code Terracotta may overwrite.
@@ -17,9 +17,9 @@ Mega | `300`
 
 ??? info "All `launch.json` parameter explanations"
     - `folder`: The folder to compile. Pretty self-explanatory.
-    - `exportMode`: Can be either `"sendToCodeClient"` or `"saveToFiles"`
-        - `"sendToCodeClient"`: When running, automatically place compiled templates via CodeClient
-        - `"saveToFiles"`: (CURRENTLY UNIMPLEMENTED!) When running, save all compiled templates to files
+    - `exportMode`: Can be either `"sendToCodeClient"` or `"saveToFiles"`.
+        - `"sendToCodeClient"`: When running, automatically place compiled templates via CodeClient.
+        - `"saveToFiles"`: (CURRENTLY UNIMPLEMENTED!) When running, save all compiled templates to files.
     - `autoSwitchToDev`: If in play or build mode upon compiling, automatically enter dev mode. If left disabled, trying to compile while in build or play mode will fail. Only applies if `exportMode` is `"sendToCodeClient"`.
     - `autoSwitchToPlay`: Automatically enter play mode after all compiled templates have been placed.
     - `plotSize`: Used by the codeline splitter to know what length templates should be limited to. If you want to "disable" the codeline splitter, just set this to a very high number.
