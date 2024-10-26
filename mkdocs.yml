@@ -58,6 +58,7 @@ nav:
     - Styled Text: codeitems/styled_text.md
   - Code Blocks:
     - Action: codeblocks/action.md
+    - Control: codeblocks/control.md
     - Set Variable: codeblocks/set_var.md
 extra_css:
   - style.css
