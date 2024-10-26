@@ -57,7 +57,7 @@ class TerracottaLexer(RegexLexer):
             (r'(?:(?<=\W)|^)(vec|snd|csnd|loc|par|item|litem|pot)(?=\s*\[)',Name.Class),
 
             #keywords
-            (r'(?:(?<=\W)|^)(if|repeat|else|while|for|in|on|to|return|returnmult|break|continue|endthread|not|wait)(?![\w])',Keyword),
+            (r'(?:(?<=\W)|^)(if|repeat|else|while|for|in|on|to|return|returnmult|break|continue|endthread|not|wait|select|filter)(?![\w])',Keyword),
             (r'(?:(?<=\W)|^)(LAGSLAYER_CANCEL|plural|optional)(?![\w])',Keyword.Declaration),
             (r'(?:(?<=\W)|^)((?:PLAYER_EVENT|ENTITY_EVENT|FUNCTION|PROCESS|PARAM)(?![\w])\s*)(\w*)',byGroup(Keyword.Declaration,Name.Variable)),
             #special case to correctly highlight plural or optional after :
@@ -70,6 +70,8 @@ class TerracottaLexer(RegexLexer):
             
             #call func and start process
             (r'(?:(?<=\W)|^)((?:call|start)(?![\w])\s*)(\[\]|\[(?:\\\]|[^\]])*[^\\]\]|\[.*|\w*)?(\s*:\s*\w+)?',byGroup(Keyword,Name.Function)),
+            #parenthetic function call
+            (r'([\w]+)(?=\s*\(.*\))',Name.Function),
 
             #type overrides
             (r'(:\s*)(\w+)',byGroup(Operator,Name.Class)),
