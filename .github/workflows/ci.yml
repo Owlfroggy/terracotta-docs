@@ -19,5 +19,6 @@ jobs:
           path: .cache
       - run: pip install mkdocs-material
       - run: pip install setuptools
+      - run: pip install mkdocs-table-reader-plugin
       - run: python setup.py install
       - run: mkdocs gh-deploy --force
