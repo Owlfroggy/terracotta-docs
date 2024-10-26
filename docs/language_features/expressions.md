@@ -121,7 +121,7 @@ default:SendMessage(line list[3]);
     default:Teleport(line selectedLocation);
     ```
 
-    It's true that the above example is a bit unnecessary, but in loops or when using indexing operations that treverse multiple levels the saved CPU can really add up.
+    It's true that the above example is a bit unnecessary, but in loops or when using indexing operations that traverse multiple levels the saved CPU can really add up.
 
 Indexes can themselves be expressions
 ```tc
@@ -183,6 +183,6 @@ Things closer to the top of this list are evaluated before things closer to the 
 
 - Nested expressions (parentheses), indexing into dicts/lists, and function calls (actions, constructors)
 - Exponentiation (`^`)
-- Multiplication, division, and modulo (`*`, `/`, `^`)
+- Multiplication, division, and modulo (`*`, `/`, `%`)
 - Addition and subtraction (`+`, `-`)
 - Comparisons (`==`, `!=`, `<`, `>`, `<=`, `>=`)
