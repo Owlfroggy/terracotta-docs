@@ -3,7 +3,7 @@ site_url: https://mrawesomeowl.github.io/terracotta-docs/
 docs_dir: docs
 theme:
   logo: assets/logo_monochrome.svg
-  favicon: assets/logo_colored.svg
+  favicon: assets/logo.svg
   name: material
   features:
     # - navigation.sections
