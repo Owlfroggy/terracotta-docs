@@ -7,6 +7,7 @@ how to build locally:
 - create (and activate) a venv for the project
 - `pip install mkdocs`
 - `pip install mkdocs-material`
+- `pip install mkdocs-table-reader-plugin`
 - `python setup.py install`
 - `mkdocs serve`
 if the above steps somehow fail to work on your machine but you still want to contribute just contact me and ill try to figure it out
