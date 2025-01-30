@@ -54,6 +54,7 @@ nav:
     - Expressions (math): language_features/expressions.md
   - Code Items:
     - Variable: codeitems/variable.md
+    - Number: codeitems/number.md
     - String: codeitems/string.md
     - Styled Text: codeitems/styled_text.md
   - Code Blocks:
