@@ -58,6 +58,7 @@ nav:
     - Styled Text: codeitems/styled_text.md
   - Code Blocks:
     - Action: codeblocks/action.md
+    - Function: codeblocks/function.md
     - Control: codeblocks/control.md
     - Select Object: codeblocks/select_object.md
     - Set Variable: codeblocks/set_var.md
