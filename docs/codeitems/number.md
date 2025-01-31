@@ -63,12 +63,24 @@ Multiplies the two Numbers together.
 4 * 5 = 20
 ```
 
+#### `vec` * `num`: `vec`
+Multiplies the length of the left Vector by the right Number.
+```tc
+vec[2,0,1] * 3 = vec[6,0,3]
+```
+
 ### / (Division)
 
 #### `num` / `num`: `num`
 Divides the left Number by the right Number.
 ```tc   
 2 / 4 = 0.5
+```
+
+#### `vec` / `num`: `vec`
+Divides the length of the left Vector by the right Number.
+```tc
+vec[10,5,0] / 2 = vec[5,2.5,0]
 ```
 
 ### ^ (Exponentiation)
