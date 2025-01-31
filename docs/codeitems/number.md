@@ -63,6 +63,12 @@ Multiplies the two Numbers together.
 4 * 5 = 20
 ```
 
+#### `str` * `num`: `str`
+Repeats the left String `right number` times.
+```tc
+"jere" * 3 = "jerejerejere"
+```
+
 #### `vec` * `num`: `vec`
 Multiplies the length of the left Vector by the right Number.
 ```tc
