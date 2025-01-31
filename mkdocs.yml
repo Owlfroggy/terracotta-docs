@@ -57,6 +57,7 @@ nav:
     - Number: codeitems/number.md
     - String: codeitems/string.md
     - Styled Text: codeitems/styled_text.md
+    - Location: codeitems/location.md
   - Code Blocks:
     - Action: codeblocks/action.md
     - Function: codeblocks/function.md
