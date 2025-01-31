@@ -35,12 +35,23 @@ wait(5 * 20){"Time Unit" = "Ticks"};
 ## Inlined Functions
 Any function that returns a value can be used in expressions. Some actions like Set Location Coordinate still return a value even if their description doesn't say so. Generally, if an action has `Variable - Variable to set` as its first parameter, it can be inlined.
 
-Custom functions cannot be inlined yet as they cannot specify return types, however this functionality will be added in a future update.
-
 ```tc title="Examples"
 default:SendMessage("You rolled a " + num:Random(1,6) + "!");
 
 default:GiveItems(item[var:SetToRandom("cooked_porkchop","cooked_beef","golden_carrot"),16]);
+```
+
+Custom function calls can be inlined as long as the function being called specifies a return value.
+```tc
+FUNCTION getCoinAmount;
+RETURNS num;
+
+return num:Random(5,10);
+```
+```tc
+PLAYER_EVENT KillPlayer;
+
+global ["%uuid coins"] += call getCoinAmount() * global ["%uuid coinMultiplier"];
 ```
 
 ## Incrementors
