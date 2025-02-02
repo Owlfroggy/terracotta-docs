@@ -61,6 +61,7 @@ nav:
     - Location: codeitems/location.md
     - Potion: codeitems/potion.md
     - Sound: codeitems/sound.md
+    - Particle: codeitems/particle.md
   - Code Blocks:
     - Action: codeblocks/action.md
     - Function: codeblocks/function.md
