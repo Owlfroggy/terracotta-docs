@@ -2,7 +2,7 @@
 
 If you haven't already installed the VSCode extension and CodeUtils, see [Installation](/getting_started/installation.md).
 
-!!! warning "Don't delete your code!"
+!!! danger "Don't delete your code!"
     Always make sure to start with an empty plot. Never run Terracotta on plots made using normal DiamondFire coding because there is no way to recover code Terracotta may overwrite.
 
 ## Creating a Project
