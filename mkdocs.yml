@@ -62,6 +62,7 @@ nav:
     - Potion: codeitems/potion.md
     - Sound: codeitems/sound.md
     - Particle: codeitems/particle.md
+    - Game Value: codeitems/game_value.md
   - Code Blocks:
     - Action: codeblocks/action.md
     - Function: codeblocks/function.md
