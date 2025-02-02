@@ -17,7 +17,7 @@ repeat Forever {
 ```
 
 ## Return
-Return uses the `return` keyword. As of now, the return keyword does not accept values. This may change in the future. For now, if you want to return values, you must manually set var arguments.
+Return uses the `return` keyword. For information on how to return values, see [Return Value](function.md#return-value).
 
 ```tc
 if (num:Random(1,2) == 2) {
