@@ -25,7 +25,7 @@ Quotes, ampersands, and backslashes themselves can all be escaped by immediately
 
 ```tc
 default:SendMessage('jeff\'s',"\"amazing\"","creation"); #jeff's "amazing" creation
-default:SendMessage("/ iron\&diamonds \\"); #/ iron&diamonds \
+default:SendMessage(" / iron\&diamonds \\ "); # / iron&diamonds \ 
 ```
 
 Newlines can be inserted using `\n`.
