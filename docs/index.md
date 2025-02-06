@@ -1,5 +1,9 @@
 # Terracotta
 
+
+!!! warning "WIP"
+    These docs are very work in progress! If you have any questions about Terracotta not answered by this incomplete documentation, DM `@mrawesomeowl` on discord.
+
 [DiamondFire](https://www.mcdiamondfire.com) is a Minecraft server where you can make your own minigames using block code.
 
 I do not like block code.
