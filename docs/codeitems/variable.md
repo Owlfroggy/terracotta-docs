@@ -63,7 +63,7 @@ Terracotta has a level of type inference built in. Types can be inferred in the 
 
     4. SetToRandom if all arguments are the same type
     ```tc
-    # type is inferred as string for future uses of the variable
+    # type is inferred as location for future uses of the variable
     global teleportLoc = var:SetToRandom(loc[10,50,10], loc[52,27,88], global spawnLoc: loc);
     ```
     ```tc
