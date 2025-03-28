@@ -69,6 +69,7 @@ nav:
     - Event: codeblocks/event.md
     - Action: codeblocks/action.md
     - Function: codeblocks/function.md
+    - Process: codeblocks/process.md
     - Control: codeblocks/control.md
     - Select Object: codeblocks/select_object.md
     - Set Variable: codeblocks/set_var.md
