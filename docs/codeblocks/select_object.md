@@ -9,7 +9,7 @@ filter Randomly(2);
 global ["%selected isHunter"] = 1;
 ```
 
-For selection actions that use a condition, put the condition immediately after the action name. Note that `player` and `entity` targets must be used in order to access if player or if entity conditions.
+For selection actions that use a condition, put the condition immediately after the action name. **Note that `player` and `entity` targets must be used in order to access if player or if entity conditions.**
 
 ```tc
 select PlayersByCondition player?IsLookingAtBlock(item["emerald_block"]);
