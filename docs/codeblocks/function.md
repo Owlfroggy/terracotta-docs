@@ -1,4 +1,4 @@
-# Defining Functions
+## Defining Functions
 A script can be declared as a function by including the `FUNCTION` header at the top of it. Function names can be given special characters using the same syntax as variables.
 ```tc
 FUNCTION FunctionName;
@@ -10,7 +10,7 @@ FUNCTION ["function with special chars!!"];
 # code here
 ```
 
-## Parameters
+### Parameters
 Parameters can be added to the function using the `PARAM` header. The order the headers are listed will be the order the arguments appear in when calling. Parameter names can be given special characters using the same sytax as variables.
 
 ```tc
@@ -51,7 +51,7 @@ default:SendMessage("&c" + line message);
     - Parameters typed as variables cannot have the optional or plural modifiers applied.    
 
 
-## Return Value
+### Return Value
 Functions can specify a return type using the `RETURNS` header. This also allows the function to be used in [expressions](../language_features/expressions.md). 
 
 If a `RETURNS` header is present, a value can be placed after the `return` keyword to return it.
