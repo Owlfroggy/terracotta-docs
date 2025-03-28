@@ -66,6 +66,7 @@ nav:
     - Particle: codeitems/particle.md
     - Game Value: codeitems/game_value.md
   - Code Blocks:
+    - Event: codeblocks/event.md
     - Action: codeblocks/action.md
     - Function: codeblocks/function.md
     - Control: codeblocks/control.md
