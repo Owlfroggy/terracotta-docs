@@ -58,6 +58,7 @@ nav:
     - String: codeitems/string.md
     - Styled Text: codeitems/styled_text.md
     - List: codeitems/list.md
+    - Dictionary: codeitems/dictionary.md
     - Vector: codeitems/vector.md
     - Location: codeitems/location.md
     - Potion: codeitems/potion.md
