@@ -4,7 +4,7 @@ Dictionaries are created by enclosing key-value pairs in curly braces and sepera
 ```tc
 line itemData = {
     "name" = "Void Sword",
-    "damage" = 14 * global,
+    "damage" = 14 * global damageBoost,
     "rarity" = "Rare",
 };
 ```
