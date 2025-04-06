@@ -8,7 +8,8 @@ csnd[Sound: str, Volume: num*, Pitch: num*]
 
 !!! warning "Constant numbers passed directly into the constructor will maintain their full precision, however if an expression that evaluates to a number is passed, that number's precision will be limited to three decimal places due to DiamondFire's precision limit."
 
-`Volume` and `Pitch` are optional and default to `1` if omitted.
+`Pitch` is optional and defaults to `1` if omitted.
+`Volume` is optional and defaults to `2` if omitted.
 
 To play a random variant every time, omit the `Variant` argument.
 
