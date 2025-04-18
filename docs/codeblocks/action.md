@@ -41,7 +41,7 @@ Player actions use the following targets:
 - `shooter`
 - `victim`
 - `allPlayers`
-- `selection`
+- `selected`
 
 ??? info "All player action names"
     {{ read_csv('csv/actions/player_action.csv') }}
@@ -54,7 +54,7 @@ default:SetVisualShoulderParrot{"Shoulder" = "Left", "Type" = "Cyan"};
 
 allPlayers:SendMessage(s"<green>%default<white>has joined!");
 
-selection:SetToCreativeMode;
+selected:SetToCreativeMode;
 
 victim:Heal(game.EventDamage/2);
 
@@ -66,7 +66,7 @@ shooter:GiveItems(item["Arrow"]);
 
 Entity actions use the following targets:
 
-- `selectionEntity`
+- `selectedEntity`
 - `defaultEntity`
 - `killerEntity`
 - `damagerEntity`
@@ -85,7 +85,7 @@ defaultEntity:Teleport(default.Location + vec[0,10,0]);
 
 defaultEntity:EatGrass;
 
-selectionEntity:Damage(5);
+selectedEntity:Damage(5);
 
 projectile:SetArrowNoClip{"Has NoClip" = "Enable"};
 

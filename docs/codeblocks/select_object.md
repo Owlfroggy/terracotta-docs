@@ -15,12 +15,12 @@ For selection actions that use a condition, put the condition immediately after 
 select PlayersByCondition player?IsLookingAtBlock(item["emerald_block"]);
 filter ByCondition global ["%default isInGame"] == 1;
 
-selection:SendMessage("You live!");
+selected:SendMessage("You live!");
 
 select Inverse;
 filter ByCondition global ["%default isInGame"] == 1;
 
-selection:Damage(999);
+selected:Damage(999);
 ```
 
 To reset the selection (equivalent to the block Select Object -> Reset) use:

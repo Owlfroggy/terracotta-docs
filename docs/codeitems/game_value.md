@@ -14,7 +14,7 @@ game.PlayerCount
 
 Values that apply to entities can be accessed using the following targets:
 
-- `selectionEntity`
+- `selectedEntity`
 - `defaultEntity`
 - `killerEntity`
 - `damagerEntity`
@@ -24,7 +24,7 @@ Values that apply to entities can be accessed using the following targets:
 - `lastEntity`
 
 ```tc title="Example"
-selectionEntity.SaddleItem
+selectedEntity.SaddleItem
 victimEntity.CurrentHealth
 lastEntity.UUID
 ```
@@ -36,10 +36,10 @@ Values that apply to players can be accessed using the following targets:
 - `damager`
 - `shooter`
 - `victim`
-- `selection`
+- `selected`
 
 ```tc title="Example"
 default.Name
 victim.EyeLocation
-selection.AttackCooldownTicks
+selected.AttackCooldownTicks
 ```

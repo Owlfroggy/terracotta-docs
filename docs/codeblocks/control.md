@@ -32,10 +32,10 @@ End Thread uses the `endthread` keyword.
 
 ```tc
 repeat Forever {
-    if (not selectionEntity?Exists) {
+    if (not selectedEntity?Exists) {
         endthread;
     }
-    selectionEntity:Heal(100);
+    selectedEntity:Heal(100);
 }
 ```
 
