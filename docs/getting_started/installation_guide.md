@@ -20,4 +20,4 @@ After it is installed, join DiamondFire and run `/ccconfig`. Under the General t
 ## That's it!
 Terracotta is now ready for use. 
 
-Next: [Learn how to compile your first plot.](plot_setup.md)
+Next: [Learn how to compile your first plot](plot_setup.md)

@@ -49,7 +49,7 @@ nav:
   - Getting Started: 
     - Installation: getting_started/installation_guide.md
     - Plot Setup: getting_started/plot_setup.md
-    - Syntax Guide: getting_started/syntax_guide.md
+    - Language Overview: getting_started/language_overview.md
   - Language Features:
     - Expressions (math): language_features/expressions.md
   - Code Items:

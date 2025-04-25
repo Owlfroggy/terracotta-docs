@@ -15,7 +15,7 @@ default:GivePotionEffect(pot["Speed", 1, (10*20) + num:Random(0,global maxPotion
 ## Value Operators
 
 !!! info
-    Many operators work on more types of code items than just numbers. For more info on which operators work with which code items, check out the code items' respecitve pages under the Code Items category.
+    Many operators work on more types of code items than just numbers. For more info on which operators work with which code items, check out the code items' respective pages under the Code Items category.
 
 Terracotta supports the following operators:
 

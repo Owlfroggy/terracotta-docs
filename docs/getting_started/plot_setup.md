@@ -47,3 +47,4 @@ When you can see `CC Conected` in the bottom right of VSCode, press `f5` or clic
 
     If you find yourself getting stuck in a plot border, run `/worldplot <your plot size>`.
 
+Next: [Get an overview of how Terracotta works](./language_overview.md)
