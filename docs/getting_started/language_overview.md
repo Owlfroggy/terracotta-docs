@@ -82,4 +82,4 @@ default:SendMessage("Hello world!"); # End-of-line comment
 #default:PlaySound(snd["Pling"]);
 ```
 ####
-Next: Read more on [Expressions](../language_features/expressions.md), learn about [Item Libraries](), see how [Actions]() and [Variables]() work, or just start messing around and reference these docs as needed!
+Next: Read more on [Expressions](../language_features/expressions.md), learn about [Item Libraries](), see how [Actions](../codeblocks/action.md) and [Variables](../codeitems/variable.md) work, or just start messing around and reference these docs as needed!
