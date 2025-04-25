@@ -21,7 +21,7 @@ To use a variable as the tag value, a default must be provided immediately after
 ```tc
 default:SendMessage("Tags!"){"Alignment Mode" = global messageMode ? "Centered"};
 ```
-If you are using the vscode extension, you can use the autocomplete shortcut (`ctrl+space` by default) to quickly insert tag names and values.
+If you are using the VSCode extension, you can use the autocomplete shortcut (`ctrl+space` by default) to quickly insert tag names and values.
 
 Arguments and tags are both optional and can be left out, making all of these valid action calls:
 ```tc

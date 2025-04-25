@@ -7,8 +7,6 @@ loc[X: num, Y: num, Z: num, Pitch: num*, Yaw: num*]
 
 `Pitch` and `Yaw` are optional and will default to `0` if omitted.
 
-!!! warning "Due to DiamondFire limiations, all location numbers will have their precision capped at two decimal places."
-
 ## Operations
 
 ### + (Addition)

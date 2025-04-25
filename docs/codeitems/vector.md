@@ -5,8 +5,6 @@ Vectors are created using the `vec` constructor. Like all constructors in Terrac
 vec[X: num, Y: num, Z: num]
 ```
 
-!!! warning "Due to DiamondFire limiations, all vector numbers will have their precision capped at two decimal places."
-
 ## Operations
 
 ### + (Addition)

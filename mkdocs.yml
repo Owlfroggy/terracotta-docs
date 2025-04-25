@@ -51,7 +51,7 @@ nav:
     - Plot Setup: getting_started/plot_setup.md
     - Language Overview: getting_started/language_overview.md
   - Language Features:
-    - Expressions (math): language_features/expressions.md
+    - Expressions: language_features/expressions.md
   - Code Items:
     - Variable: codeitems/variable.md
     - Number: codeitems/number.md
