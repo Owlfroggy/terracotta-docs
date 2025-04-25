@@ -186,6 +186,83 @@ global dict["words"]:list[0] = "jeremaster";
 default:SendMessage(global dict["words"][0]); #sends "jeremaster"
 ```
 
+## Conditional Expressions
+Conditions can take the form of either an expression with a comparison operator or an IF PLAYER/ENTITY/GAME/VARIABLE action. 
+
+The following are both valid ways to check which item a player is holding:
+```tc
+if (default?IsHoldingItem(item["emerald"]){"Hand Slot" = "Main hand"}) {
+    default:SendMessage("Accepted!");
+}
+
+if (default.MainHandItem == item["emerald"]) {
+    default:SendMessage("Accepted!");
+}
+```
+
+As of now, there are no logic operators, meaning there is no way to combine multiple conditions. This will likely change in the future.
+
+### Comparison Operators
+Comparison operators compare their left expression and right expression.
+The following comparison operators are available:
+
+- `==`
+- `!=`
+- `<`
+- `>`
+- `<=`
+- `>=`
+
+`==` and `!=` work with any types of values. `<`, `>`, `<=`, and `>=` only work with numbers.
+
+```tc title="Example"
+if (default.Y + 2 > 100) {
+    # code...
+};
+```
+```tc title="Example"
+select PlayersByCondition saved ["powerup %uuid"] == "extraHealth";
+```
+
+### Condition Actions
+Condition actions syntax is identical to normal action syntax except it uses `?` instead of `:`.
+```tc
+target?Action(arguments){tags}
+```
+
+```tc title="Example"
+if (game?CommandEquals("spawn")) {
+    default:Teleport(loc[5,50,5]);
+}
+```
+```tc title="Example"
+select PlayersByCondition list?Contains(saved ["powerups %uuid"], "speedBoost"));
+```
+
+#### Generic Targets
+Due to DiamondFire limitations, condition actions used outside of IF blocks (e.g. in repeats or select actions) cannot differentiate between targets. To access IF PLAYER and IF ENTITY conditions in these contexts, the generic targets `player` and `entity` must be used.
+
+```tc title="Example"
+while (player?IsSneaking) {
+    # code...
+}
+```
+```tc title="Example"
+select EntitiesByCondition entity?IsNearLocation(default.Location,5);
+```
+
+#### Not (`!`)
+Condition actions can be inverted by prefixing them with a `!`. This is equivalent to clicking their codeblock with the NOT Arrow.
+```tc title="Example"
+if (!default?HasPlotPermission{"Permission" = "Developer"}) {
+    default:SendMessage("&cYou do not have permission to use this command!");
+    return;
+}
+```
+```tc title="Example"
+select EntitiesByCondition !entity?HasTag("owner","%default");
+```
+
 ## Order of Operations
 
 Unlike a certain expression system used by DiamondFire that **shall not be named**, Terracotta expressions follow a sane order of operations.
