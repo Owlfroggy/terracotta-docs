@@ -6,10 +6,9 @@ target:Action(arguments){tags};
 
 ### Arguments
 
-Arguments are values seperated by commas. Arguments with no value are converted to empty slots.
+Arguments are values seperated by commas.
 ```tc
 default:SendMessage("Hello","world!");
-default:SendMessage(  ,"Slot 2 string",  ,  ,"Slot 5 string");
 ```
 
 ### Tags
