@@ -47,7 +47,7 @@ markdown_extensions:
 nav:
   - About: index.md
   - Getting Started: 
-    - Installation: getting_started/installation.md
+    - Installation: getting_started/installation_guide.md
     - Plot Setup: getting_started/plot_setup.md
     - Syntax Guide: getting_started/syntax_guide.md
   - Language Features:
