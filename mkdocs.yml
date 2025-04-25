@@ -74,6 +74,7 @@ nav:
     - Select Object: codeblocks/select_object.md
     - Set Variable: codeblocks/set_var.md
     - If / If Else: codeblocks/if.md
+    - Repeat: codeblocks/repeat.md
 extra_css:
   - style.css
 plugins:
