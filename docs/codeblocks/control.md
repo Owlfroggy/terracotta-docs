@@ -10,8 +10,8 @@ default:SendMessage("Bored yet?");
 Like other functions in Terracotta, neither arguments nor tags are required. Leaving out arguments will default to a wait time of 1; leaving out tags will default to a unit of ticks.
 
 ```tc
-repeat Forever {
-    allPlayers:DisplayParticleEffect(par["Flame"],default.Location);
+repeat {
+    allPlayers:DisplayParticleEffect(par("Flame"),default.Location);
     wait; #waits for one tick
 }
 ```

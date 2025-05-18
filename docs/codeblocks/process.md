@@ -6,7 +6,7 @@ PROCESS ProcessName;
 ```
 
 ```tc
-PROCESS ["process with special chars!!"];
+PROCESS ("process with special chars!!");
 # code here
 ```
 
@@ -15,7 +15,7 @@ Processes can be started using the `start` keyword followed by the process' name
 
 ```tc
 start ProcessName;
-start ["process with special chars!!"];
+start ("process with special chars!!");
 ```
 
 To change local variable and target behavior, use tags in the same way you would for any other action.

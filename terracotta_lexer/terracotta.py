@@ -51,10 +51,10 @@ class TerracottaLexer(RegexLexer):
             (r'[\{\}\(\)\[\]]',Punctuation.Paren),
 
             #variables
-            (r'(?:(?<=\W)|^)((?:local|global|saved|line)(?![\w])\s*)(?:(?:(\[\s*)((\"|\')(?:\\\4|(?!\4).)*(?:\4|$|\\))(\s*\])|(\w+))(?:(\s*\:)(\s*\w+)?)?)?',byGroup(Keyword.Scope,Punctuation.Paren,String,None,Punctuation.Paren,Name.Variable,Operator,Name.Class)),
+            (r'(?:(?<=\W)|^)((?:local|global|saved|line)(?![\w])\s*)(?:(?:(\(\s*)((\"|\')(?:\\\4|(?!\4).)*(?:\4|$|\\))(\s*\))|(\w+))(?:(\s*\:)(\s*\w+)?)?)?',byGroup(Keyword.Scope,Punctuation.Paren,String,None,Punctuation.Paren,Name.Variable,Operator,Name.Class)),
 
             #constructors
-            (r'(?:(?<=\W)|^)(vec|snd|csnd|loc|par|item|litem|pot)(?=\s*\[)',Name.Class),
+            (r'(?:(?<=\W)|^)(vec|snd|csnd|loc|par|item|litem|pot)(?=\s*\()',Name.Class),
 
             #keywords
             (r'(?:(?<=\W)|^)(if|repeat|else|while|for|in|on|to|return|returnmult|break|continue|endthread|not|wait|select|filter)(?![\w])',Keyword),
@@ -69,7 +69,7 @@ class TerracottaLexer(RegexLexer):
             (r'(\w+\s*)((?:\.)\s*)(\[\]|\[(?:\\\]|[^\]])*[^\\]\]|\[.*|\w*)?',byGroup(Name.Namespace,Operator,Name.Property)),
             
             #call func and start process
-            (r'(?:(?<=\W)|^)((?:call|start)(?![\w])\s*)(\[\]|\[(?:\\\]|[^\]])*[^\\]\]|\[.*|\w*)?(\s*:\s*\w+)?',byGroup(Keyword,Name.Function)),
+            (r'(?:(?<=\W)|^)(call|start)(\s*\w*)',byGroup(Keyword,Name.Function)),
             #parenthetic function call
             (r'([\w]+)(?=\s*\(.*\))',Name.Function),
 
@@ -80,6 +80,6 @@ class TerracottaLexer(RegexLexer):
             (r'[=*+-/:?<>%^!]',Operator),
 
             #color types names as type names on their own if nothing else has claimed them already
-            (r'(?:(?<=\W)|^)(str|num|vec|loc|pot|snd|txt|item|list|dict|par|any)(?![\\w])',Name.Class),
+            (r'(?:(?<=\W)|^)(str|num|vec|loc|pot|snd|txt|item|list|dict|par|any|csnd|litem)(?![\\w])',Name.Class),
         ]
     }

@@ -6,19 +6,19 @@ Selections can be created using the `select` keyword followed by an action. They
 select AllPlayers;
 filter Randomly(2);
 
-global ["%selected isHunter"] = 1;
+global ("%selected isHunter") = 1;
 ```
 
 For selection actions that use a condition, put the condition immediately after the action name. For information on how to write conditions, see [Conditional Expressions](../language_features/expressions.md#conditional-expressions). **Note that `player` and `entity` targets must be used in order to access if player or if entity conditions.**
 
 ```tc
-select PlayersByCondition player?IsLookingAtBlock(item["emerald_block"]);
-filter ByCondition global ["%default isInGame"] == 1;
+select PlayersByCondition player?IsLookingAtBlock(item("emerald_block"));
+filter ByCondition global ("%default isInGame") == 1;
 
 selected:SendMessage("You live!");
 
 select Inverse;
-filter ByCondition global ["%default isInGame"] == 1;
+filter ByCondition global ("%default isInGame") == 1;
 
 selected:Damage(999);
 ```

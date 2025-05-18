@@ -26,15 +26,15 @@ default:SendMessage(line message){"Alignment Mode" = "Centered"};
 Terracotta is a non-whitespace-significant language that relies on semicolons to separate instructions. This means complex lines can be arbitrarily split up however you see fit because it's ultimately the semicolons that differentiate between them.
 
 ```tc title="Both of these statements are valid."
-default:DisplayParticleEffect(par["Block",{"Amount" = 10, "Material" = "diamond_block"}]);
+default:DisplayParticleEffect(par("Block",{"Amount" = 10, "Material" = "diamond_block"}));
 default:DisplayParticleEffect(
-    par[
+    par(
         "Block",
         {
             "Amount" = 10, 
             "Material" = "diamond_block"
         }
-    ]
+    )
 );
 ```
 
@@ -46,7 +46,7 @@ if (default?HasPlotPermission{"Permission" = "Owner"}) {
 ```
 ```tc title="Example"
 while (default.AttackCooldownTicks > 0) {
-    default:GivePotionEffect(pot["Slowness"]);
+    default:GivePotionEffect(pot("Slowness"));
 }
 default:ClearPotionEffects;
 ```
@@ -59,13 +59,13 @@ FUNCTION coloredParticleTrail;
 PARAM hue: num;
 
 default:DisplayParticleEffect(
-    par[
+    par(
         var:SetToRandom("Entity Effect","Dust"),
         {
             "Amount" = num:Random(1,5),
             "Color" = var:SetToHSBColor(line hue,100,100)
         }
-    ],
+    ),
     loc:ShiftAllAxes(default.Location,0,0.1,0)
 );
 ```
@@ -79,7 +79,7 @@ Single-line comments are created using `#`. There is currently no syntax for mul
 default:SendMessage("Hello world!"); # End-of-line comment
 
 # Code can be commented out to disable it:
-#default:PlaySound(snd["Pling"]);
+#default:PlaySound(snd("Pling"));
 ```
 ####
 Next: Read more on [Expressions](../language_features/expressions.md), learn about [Item Libraries](), see how [Actions](../codeblocks/action.md) and [Variables](../codeitems/variable.md) work, or just start messing around and reference these docs as needed!

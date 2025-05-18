@@ -23,11 +23,11 @@ default:SendMessage(local message, global message);
 ```
 
 ## String Names
-To use text codes or special characters in variable names, wrap the variable name in a string and wrap the string in square brackets.
+To use text codes or special characters in variable names, wrap the variable name in a string and wrap the string in parenthese.
 
 ```tc
-global ["%var(team) playerCount"] = game.SelectionSize;
-saved ["%uuid gamesPlayed"] += 1;
+global ("%var(team) playerCount") = game.SelectionSize;
+saved ("%uuid gamesPlayed") += 1;
 ```
 
 !!! warning "This string value does not accept expressions! It must be a single string literal."
@@ -42,7 +42,7 @@ Terracotta has a level of type inference built in. Types can be inferred in the 
     1. Setting a variable to a value
     ```tc
     # type is inferred as vector for future uses of the variable
-    global var = vec[1,2,3];
+    global var = vec(1,2,3);
     ```
     
     2. Setting a variable to the result of a function
@@ -64,7 +64,7 @@ Terracotta has a level of type inference built in. Types can be inferred in the 
     4. SetToRandom if all arguments are the same type
     ```tc
     # type is inferred as location for future uses of the variable
-    global teleportLoc = var:SetToRandom(loc[10,50,10], loc[52,27,88], global spawnLoc: loc);
+    global teleportLoc = var:SetToRandom(loc(10,50,10), loc(52,27,88), global spawnLoc: loc);
     ```
     ```tc
     # type remains unknown
@@ -73,7 +73,7 @@ Terracotta has a level of type inference built in. Types can be inferred in the 
     
     5. Inside if var?IsType
     ```tc
-    if (var?IsType(saved ["%uuid trail"]){"Variable Type" = "Particle"}) {
+    if (var?IsType(saved ("%uuid trail")){"Variable Type" = "Particle"}) {
         # type is inferred as particle inside this if block
     }
     # outside the if block, type remains unknown
@@ -98,11 +98,11 @@ When specified in an expression, the type hint is local to that one use of the v
 ```tc
 FUNCTION GoToSpawn;
 
-default:Teleport(global spawnLocation: loc + vec[0,1,0]);
+default:Teleport(global spawnLocation: loc + vec(0,1,0));
 wait(20);
 
 # this will fail to compile because the compiler doesn't know the type of spawnLocation
-default:Teleport(global spawnLocation + vec[0,10,0]);
+default:Teleport(global spawnLocation + vec(0,10,0));
 ```
 
 Types can be given to variables on their own and will persist for the rest of the file unless overridden.
@@ -113,7 +113,7 @@ FUNCTION GoToSpawn;
 # spawnLocation will have type 'loc' for the rest of the script
 global spawnLocation: loc;
 
-default:Teleport(global spawnLocation + vec[0,1,0]);
+default:Teleport(global spawnLocation + vec(0,1,0));
 wait(20);
-default:Teleport(global spawnLocation + vec[0,10,0]);
+default:Teleport(global spawnLocation + vec(0,10,0));
 ```

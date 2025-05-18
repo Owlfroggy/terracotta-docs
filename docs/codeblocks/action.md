@@ -25,7 +25,7 @@ If you are using the VSCode extension, you can use the autocomplete shortcut (`c
 
 Arguments and tags are both optional and can be left out, making all of these valid action calls:
 ```tc
-default:StopSounds(snd["Pling"]);
+default:StopSounds(snd("Pling"));
 default:StopSounds{"Sound Source" = "Jukebox/Note Blocks"};
 default:StopSounds;
 ```
@@ -47,7 +47,7 @@ Player actions use the following targets:
 
 
 ```tc title="Examples"
-default:GivePotionEffect(pot["Saturation"]){"Effect Particles" = "None", "Overwrite Effect" = "False"};
+default:GivePotionEffect(pot("Saturation")){"Effect Particles" = "None", "Overwrite Effect" = "False"};
 
 default:SetVisualShoulderParrot{"Shoulder" = "Left", "Type" = "Cyan"};
 
@@ -57,7 +57,7 @@ selected:SetToCreativeMode;
 
 victim:Heal(game.EventDamage/2);
 
-shooter:GiveItems(item["Arrow"]);
+shooter:GiveItems(item("Arrow"));
 ```
 
 
@@ -80,7 +80,7 @@ Entity actions use the following targets:
     {{ read_csv('csv/actions/entity_action.csv') }}
 
 ```tc title="Examples"
-defaultEntity:Teleport(default.Location + vec[0,10,0]);
+defaultEntity:Teleport(default.Location + vec(0,10,0));
 
 defaultEntity:EatGrass;
 
@@ -101,12 +101,12 @@ Game actions use the `game` target.
     {{ read_csv('csv/actions/game_action.csv') }}
 
 ```tc title="Examples"
-game:SpawnMob(item["zombie_spawn_egg"],game.EventBlockLocation);
+game:SpawnMob(item("zombie_spawn_egg"),game.EventBlockLocation);
 
 game:CancelEvent;
 
 game:SummonLightning(victim.Location);
 
-game:SetBlock(loc[10,50,10],item["beacon"]);
+game:SetBlock(loc(10,50,10),item("beacon"));
 ```
 

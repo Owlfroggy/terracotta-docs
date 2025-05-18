@@ -17,7 +17,7 @@ default:SendMessage(s"&aawesome message"); # &aawesome message
 #### `txt` + `any`: `txt`
 Converts the right value into a String then adds it onto the end of the left Styled Text.
 ```tc
-s"Spawn point: " + loc[10,50,10] = s"Spawn point: [10,50,10]"
+s"Spawn point: " + loc(10,50,10) = s"Spawn point: [10,50,10]"
 s"Unlocks: " + ["Diamond Sword", "Health Up"] = s"Unlocks: [Diamond Sword, Health Up]"
 ```
 

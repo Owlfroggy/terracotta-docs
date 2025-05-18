@@ -5,11 +5,11 @@ For uses of the Set Variable block not covered by the operators listed below, se
 You can write an expression *almost* anywhere you can put a value.
 
 ```tc title="Examples"
-line reward = num:Round(game.PlayerCount * global coinBonus * (global ["%default killstreak"] + 10));
+line reward = num:Round(game.PlayerCount * global coinBonus * (global ("%default killstreak") + 10));
 
-default:Teleport(default.Location + (default.Direction * global ["%default teleportRange"]));
+default:Teleport(default.Location + (default.Direction * global ("%default teleportRange")));
 
-default:GivePotionEffect(pot["Speed", 1, (10*20) + num:Random(0,global maxPotionBonus)]);
+default:GivePotionEffect(pot("Speed", 1, (10*20) + num:Random(0,global maxPotionBonus)));
 ```
 
 ## Value Operators
@@ -38,7 +38,7 @@ Any function that returns a value can be used in expressions. Some actions like 
 ```tc title="Examples"
 default:SendMessage("You rolled a " + num:Random(1,6) + "!");
 
-default:GiveItems(item[var:SetToRandom("cooked_porkchop","cooked_beef","golden_carrot"),16]);
+default:GiveItems(item(var:SetToRandom("cooked_porkchop","cooked_beef","golden_carrot"),16));
 ```
 
 Custom function calls can be inlined as long as the function being called specifies a return value.
@@ -51,7 +51,7 @@ return num:Random(5,10);
 ```tc
 PLAYER_EVENT KillPlayer;
 
-global ["%uuid coins"] += call getCoinAmount() * global ["%uuid coinMultiplier"];
+global ("%uuid coins") += call getCoinAmount() * global ("%uuid coinMultiplier");
 ```
 
 ## Incrementors
@@ -71,7 +71,7 @@ Terracotta has some type inference built in, so for many situations (especially 
 
 In the below case, `spawnLocation`'s type is unknown. For the compiler to know what to do when adding the vector to it, you have to manually specify that it's a location.
 ```tc
-default:Teleport(global spawnLocation: loc + vec[1,10,1]);
+default:Teleport(global spawnLocation: loc + vec(1,10,1));
 ```
 
 
@@ -80,16 +80,16 @@ Specifying the type of a variable every time you use it would suck, so you can a
 global spawnLocation: loc;
 
 # compiler now knows for both of these lines that `spawnLocation` is a location
-default:Teleport(global spawnLocation + vec[0,10,0]);
+default:Teleport(global spawnLocation + vec(0,10,0));
 wait(1){"Time Unit" = "Seconds"};
-default:Teleport(global spawnLocation + vec[0,20,0]);
+default:Teleport(global spawnLocation + vec(0,20,0));
 ```
 
 
 Type overrides can also be applied to indexing operations and actions/functions that return multiple types.
 
 ```tc
-default:Teleport(global spawnLocationDict["main"]: loc + vec[0,10,0]);
+default:Teleport(global spawnLocationDict["main"]: loc + vec(0,10,0));
 
 line newTag = item:GetTag(global item,"cooltagname"): num + 10;
 ```
@@ -114,7 +114,7 @@ default:SendMessage(line list[3]);
 
     ```tc title="Bad"
     global locations = {
-        "spawn" = loc[10,50,10]
+        "spawn" = loc(10,50,10)
     };
 
     default:SendMessage("Teleporting to location", global locations["spawn"]);
@@ -123,7 +123,7 @@ default:SendMessage(line list[3]);
 
     ```tc title="Good"
     global locations = {
-        "spawn" = loc[10,50,10]
+        "spawn" = loc(10,50,10)
     };
 
     line selectedLocation = global locations["spawn"];
@@ -152,8 +152,8 @@ line teamData = line teams[var:SetToRandom("red","blue")];
 
 If the type of a value is unknown, it must be manually specified in order to index into it. The indexing operation can appear directly after the type override; no extra parentheses are needed.
 ```tc
-default:SendMessage(global dict_declared_elsewhere: dict["cool_key"]);
-default:SendMessage(global list_declared_elsewhere: list[5]);
+default:SendMessage(global dict_declared_elsewhere:dict["cool_key"]);
+default:SendMessage(global list_declared_elsewhere:list[5]);
 ```
 
 Multiple levels can be traversed, however you will have to manually specify the type of each level.
@@ -191,11 +191,11 @@ Conditions can take the form of either an expression with a comparison operator 
 
 The following are both valid ways to check which item a player is holding:
 ```tc
-if (default?IsHoldingItem(item["emerald"]){"Hand Slot" = "Main hand"}) {
+if (default?IsHoldingItem(item("emerald")){"Hand Slot" = "Main hand"}) {
     default:SendMessage("Accepted!");
 }
 
-if (default.MainHandItem == item["emerald"]) {
+if (default.MainHandItem == item("emerald")) {
     default:SendMessage("Accepted!");
 }
 ```
@@ -221,7 +221,7 @@ if (default.Y + 2 > 100) {
 };
 ```
 ```tc title="Example"
-select PlayersByCondition saved ["powerup %uuid"] == "extraHealth";
+select PlayersByCondition saved ("powerup %uuid") == "extraHealth";
 ```
 
 ### Condition Actions
@@ -232,11 +232,11 @@ target?Action(arguments){tags}
 
 ```tc title="Example"
 if (game?CommandEquals("spawn")) {
-    default:Teleport(loc[5,50,5]);
+    default:Teleport(loc(5,50,5));
 }
 ```
 ```tc title="Example"
-select PlayersByCondition list?Contains(saved ["powerups %uuid"], "speedBoost"));
+select PlayersByCondition list?Contains(saved ("powerups %uuid"), "speedBoost"));
 ```
 
 #### Generic Targets

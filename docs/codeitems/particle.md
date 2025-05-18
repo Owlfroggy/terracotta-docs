@@ -2,7 +2,7 @@
 Particles are created using the `par` constructor. Like all constructors in Terracotta, the values passed into the constructor are [Expressions](../language_features/expressions.md) and can take full advantage of their features. 
 
 ```tc
-par[Particle: str, Data: dict*]
+par(Particle: str, Data: dict*)
 ```
 
 If the data dictionary is omitted, all fields will use their default values.
@@ -10,7 +10,7 @@ If the data dictionary is omitted, all fields will use their default values.
 `Particle` is the name of the potion that appears at the top of a particle effect's button, NOT its minecraft id.
 
 ```tc
-par["Critical Hit"]
+par("Critical Hit")
 ```
 
 ![Clarification Image](../assets/particle_arg_clarification.png){width="500"}
@@ -30,11 +30,11 @@ par["Dust",{
 !!! info 
     While the values passed into the `data` dictionary can be expressions, the dictionary itself cannot. 
     ```tc title="Valid"
-    par["Flame",{"Amount" = num:Random(1,10)}]
+    par("Flame",{"Amount" = num:Random(1,10)})
     ```
     ```tc title="Invalid"
     global data = {"Amount" = 10};
-    par["Flame",global data]
+    par("Flame",global data)
     ```
 
 The following are all the possible data fields. `Amount` and `Spread` can always be specified, the rest may or may not be available depending on the type of particle.
@@ -56,10 +56,10 @@ Defaults to `[0,0]` if omitted.
 ### Motion
 A `vec` specifying the velocity of the particles. Longer length vectors will result in faster movement. 
 
-Defaults to `vec[1, 0, 0]` if omitted.
+Defaults to `vec(1, 0, 0)` if omitted.
 
 ```tc title="Example"
-"Motion" = vec[0, 5, 0] # Launches particles straight up.
+"Motion" = vec(0, 5, 0) # Launches particles straight up.
 ```
 
 ### Motion Variation
@@ -136,11 +136,11 @@ Defaults to `100` if omitted.
 #### `txt` + `par`: `txt`
 Converts the right Particle into a String then adds it onto the end of the left Styled Text.
 ```tc
-s"Selected trail: " + par["Flame"] = s"Selected Trail: Flame[1][0.0,0.0][1.0,0.0,0.0|100%]"
+s"Selected trail: " + par("Flame") = s"Selected Trail: Flame[1][0.0,0.0][1.0,0.0,0.0|100%]"
 ```
 
 #### `par` + `txt`: `txt`
 Converts the left Particle into a String then adds it at the beginning of the right Styled Text.
 ```tc
-par["Bubble"] + s" is a particle." = s"Bubble[1][0.0,0.0][1.0,0.0,0.0|100%] is a particle."
+par("Bubble") + s" is a particle." = s"Bubble[1][0.0,0.0][1.0,0.0,0.0|100%] is a particle."
 ```

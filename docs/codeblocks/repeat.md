@@ -41,7 +41,7 @@ The following actions are supported:
 
 ```tc title="Example"
 for (line l on Path(attacker.EyeLocation,victim.Location)) {
-    allPlayers:DisplayParticleEffect(par["Flame"]);
+    allPlayers:DisplayParticleEffect(par("Flame"));
 }
 ```
 
@@ -73,7 +73,7 @@ for (line k, line v in line data) {
 }
 ```
 ```tc title="Inlining Example"
-for (line particle in [par["Flame"],par["Cloud"]]) {
+for (line particle in [par("Flame"),par("Cloud")]) {
     allPlayers:DisplayParticleEffect(default.Location,line particle);
 }
 ```
@@ -81,12 +81,12 @@ for (line particle in [par["Flame"],par["Cloud"]]) {
 In order for variables of an unknown type to be iterated over, they must have their type manually specified using a [Type Override](../language_features/expressions.md#type-overrides). Additionally, the types of the variables to the left of the `in` keyword can also have their types overridden.
 
 ```tc title="Example"
-for (line ability in saved ["abilities %uuid"]: list) {
+for (line ability in saved ("abilities %uuid"): list) {
     # code...
 }
 ```
 ```tc title="Example"
-for (line skill, line level: num in saved ["skills %uuid"]: dict) {
+for (line skill, line level: num in saved ("skills %uuid"): dict) {
     # code...
 }
 ```
@@ -110,7 +110,7 @@ while (num:Random(1,10) != 10) {
 }
 ```
 ```tc title="Example"
-while (!player?IsStandingOnBlock(item["obsidian"])) {
+while (!player?IsStandingOnBlock(item("obsidian"))) {
     default:Damage(1);
     wait(20);
 }
