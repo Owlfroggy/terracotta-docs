@@ -1,4 +1,4 @@
-# https://mrawesomeowl.github.io/terracotta-docs/ << actual website
+# https://owlfroggy.github.io/terracotta-docs/ << actual website
 ---
 # terracotta documentation site
 
