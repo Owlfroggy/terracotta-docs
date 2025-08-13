@@ -1,5 +1,5 @@
 ## Scripts
-Every Terracotta script represents one line of codeblocks in DiamondFire. These scripts are seperated into two parts: Headers that appear at the top of the file and the code that appears below them. 
+Every Terracotta script represents one line of codeblocks in DiamondFire. In other words, each script represents exactly one function, process, or event. These scripts are seperated into two parts: Headers that appear at the top of the file and the code that appears below them. 
 
 Headers determine the type of codeline (e.g. whether a line starts with a PLAYER_EVENT block or a FUNCTION block) and any additional information about it (e.g. the cancel scythe or parameters).
 
@@ -47,6 +47,7 @@ if (default?HasPlotPermission{"Permission" = "Owner"}) {
 ```tc title="Example"
 while (default.AttackCooldownTicks > 0) {
     default:GivePotionEffect(pot("Slowness"));
+    wait;
 }
 default:ClearPotionEffects;
 ```
