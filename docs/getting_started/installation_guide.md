@@ -4,7 +4,7 @@
 !!! info "Official support for other editors isn't currently planned, though that might change in the future."
 [Install VSCode](https://code.visualstudio.com/download) if you haven't already. It will be the editor you use to write Terracotta code.
 
-The extension can be downloaded from the Extension Marketplace [here](), or by searching 'Terracotta' in the VSCode extensions tab. Once downloaded, it should set itself up automatically. If you see this message in the bottom right, that means it has successfully installed itself:
+The extension can be downloaded from the Extension Marketplace [here](https://marketplace.visualstudio.com/items?itemName=Owlfroggy.terracotta), or by searching 'Terracotta' in the VSCode extensions tab. Once downloaded, it should set itself up automatically. If you see this message in the bottom right, that means it has successfully installed itself:
 
 ![Notification Example](../assets/langauge_server_started.png){width="500"}
 
