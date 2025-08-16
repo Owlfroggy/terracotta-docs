@@ -1,0 +1,61 @@
+.highlight .nn {
+    color: #B1D7E0;
+}
+
+.highlight .nf {
+    color: #FDFBAC;
+}
+
+.highlight .o {
+    color: #4CFFFF;
+}
+
+.highlight .pp {
+    color: #8888FF;
+}
+
+.highlight .s {
+    color: #ADF195;
+}
+
+.highlight .k {
+    color: #F86D7C;
+    font-weight: bold;
+}
+
+.highlight .kd {
+    color: #F86DA7;
+    font-weight: bold;
+}
+
+.highlight .ks {
+    color: #CCAAFF;
+}
+
+.highlight .nv {
+    color: #CCCCCC;
+}
+
+.highlight .err {
+    color: #CCCCCC;
+}
+
+.highlight .nc {
+    color: #84D6FF;
+}
+
+.highlight .m {
+    color: #FFC600
+}
+
+.highlight .c {
+    color: #777777;
+}
+
+.highlight .py {
+    color: #61A2F1;
+}
+
+.highlight .se {
+    color: #89DDFF
+}
