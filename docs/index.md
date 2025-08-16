@@ -1,7 +1,7 @@
 # Terracotta
 
 !!! warning "WIP"
-    These docs are very work in progress! If you have any questions about Terracotta not answered by this incomplete documentation, DM `@owl_froggy` on discord.
+    These docs are very work in progress! If you have any questions about Terracotta not answered by this incomplete documentation, ask in [the Discord server](https://discord.gg/at9uBFXPxy).
 
 [DiamondFire](https://www.mcdiamondfire.com) is a Minecraft server where you can make your own minigames using block code.
 

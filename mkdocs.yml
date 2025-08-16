@@ -77,6 +77,12 @@ nav:
     - Repeat: codeblocks/repeat.md
 extra_css:
   - style.css
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Owlfroggy/terracotta
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/at9uBFXPxy
 plugins:
   - search
   - table-reader
